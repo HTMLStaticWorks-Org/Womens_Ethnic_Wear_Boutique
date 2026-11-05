@@ -1,0 +1,104 @@
+/* ==========================================================================
+   ZARIYA — LUXURY WOMEN'S ETHNIC WEAR BOUTIQUE
+   Right-to-Left Stylesheet (rtl.css)
+   Supports Arabic / Hebrew / Urdu Bidirectional Layouts via dir="rtl"
+   Note: Card contents remain strictly center-aligned in ALL views per spec.
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Preserve strict center alignment inside all 3D tilt cards & centered headers */
+[dir="rtl"] .section-header:not(.section-header--split),
+[dir="rtl"] .tilt-card,
+[dir="rtl"] .tilt-card__body,
+[dir="rtl"] .tilt-card__subcat,
+[dir="rtl"] .tilt-card__title,
+[dir="rtl"] .tilt-card__desc,
+[dir="rtl"] .tilt-card__price,
+[dir="rtl"] .countdown-cell {
+  text-align: center;
+}
+
+/* Flip Hero Gradient Direction so dark readable backdrop sits behind RTL text */
+[dir="rtl"] .hero-overlay {
+  background: linear-gradient(
+    -90deg,
+    rgba(0, 0, 0, 0.40) 0%,
+    rgba(0, 0, 0, 0.15) 45%,
+    rgba(0, 0, 0, 0) 75%
+  );
+}
+
+[dir="rtl"] .closing-banner__overlay {
+  background: linear-gradient(
+    -90deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.25) 55%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+/* Flip Directional Icons (arrows/chevrons) */
+[dir="rtl"] .icon-directional,
+[dir="rtl"] .btn svg.icon-arrow,
+[dir="rtl"] .editorial-link svg.icon-arrow {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .btn:hover svg.icon-arrow {
+  transform: scaleX(-1) translateX(3px);
+}
+
+[dir="rtl"] .editorial-link:hover svg.icon-arrow {
+  transform: scaleX(-1) translateX(4px);
+}
+
+[dir="rtl"] .editorial-link::after {
+  transform-origin: right;
+}
+
+/* Mobile Drawer Slide From Left in RTL */
+[dir="rtl"] .mobile-drawer__panel {
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .mobile-drawer.is-open .mobile-drawer__panel {
+  transform: translateX(0);
+}
+
+/* Reverse Marquee Animation Direction for Natural RTL Flow */
+[dir="rtl"] .marquee-group {
+  animation-name: marqueeScrollRTL !important;
+}
+
+@keyframes marqueeScrollRTL {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+[dir="rtl"] .marquee-band::before {
+  left: auto;
+  right: 0;
+  background: linear-gradient(to left, var(--maroon-deep), transparent);
+}
+
+[dir="rtl"] .marquee-band::after {
+  right: auto;
+  left: 0;
+  background: linear-gradient(to right, var(--maroon-deep), transparent);
+}
+
+/* Keep Phone Numbers & Prices Left-to-Right Numerically Legible */
+[dir="rtl"] .ltr-num {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+

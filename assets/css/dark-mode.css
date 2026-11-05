@@ -1,0 +1,104 @@
+/* ==========================================================================
+   ZARIYA — LUXURY WOMEN'S ETHNIC WEAR BOUTIQUE
+   Dark Mode Stylesheet (dark-mode.css)
+   Palette: Deep Aubergine & Midnight Velvet Surfaces with Antique Gold Accents
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* Aubergine / Midnight Luxury Surfaces */
+  --bg-body: #15070E;
+  --bg-elevated: #210C16;
+  --bg-alt: #1B0912;
+  --bg-blush: #260E1B;
+  --bg-royal: #2B0B1A;
+  --bg-emerald: #09302B;
+  --bg-header: rgba(21, 7, 14, 0.86);
+  --bg-header-scrolled: rgba(21, 7, 14, 0.96);
+  --bg-card: #210C16;
+  --bg-modal: #220D18;
+  --bg-input: #190810;
+
+  /* High-Contrast Warm Ivory & Champagne Gold Text (WCAG 2.1 AA Verified) */
+  --text-primary: #FBF5EA;
+  --text-secondary: #DECED5;
+  --text-muted: #B89FA9;
+  --text-on-dark: #FBF5EA;
+  --text-on-dark-muted: rgba(251, 245, 234, 0.84);
+  --text-accent: #E6C77E;
+  --text-gold: #DFBA66;
+
+  /* Borders & Glows */
+  --border-hairline: rgba(201, 162, 75, 0.22);
+  --border-gold: rgba(201, 162, 75, 0.45);
+  --border-gold-strong: rgba(227, 197, 123, 0.85);
+  --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.45);
+  --shadow-elevated: 0 28px 68px rgba(0, 0, 0, 0.65);
+  --shadow-gold-glow: 0 16px 44px rgba(201, 162, 75, 0.25);
+}
+
+[data-theme="dark"] .brand-logo__mark {
+  color: var(--gold);
+}
+
+[data-theme="dark"] .btn-primary {
+  background-color: var(--gold);
+  color: #1A0810;
+  border-color: var(--gold-light);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background-color: var(--gold-light);
+  color: #15070E;
+}
+
+[data-theme="dark"] .btn-outline {
+  color: var(--ivory);
+  border-color: var(--gold);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  background-color: var(--gold);
+  color: #1A0810;
+  border-color: var(--gold);
+}
+
+[data-theme="dark"] .story-dot[aria-selected="true"]::before {
+  background-color: var(--gold);
+}
+
+[data-theme="dark"] .subcat-pill:hover,
+[data-theme="dark"] .subcat-pill[aria-pressed="true"],
+[data-theme="dark"] .modal-thumb[aria-selected="true"] {
+  background-color: var(--gold);
+  color: #1A0810;
+  border-color: var(--gold);
+}
+
+[data-theme="dark"] .styling-step-btn[aria-selected="true"] {
+  border-inline-start-color: var(--gold);
+}
+
+[data-theme="dark"] .skeleton-box {
+  background: linear-gradient(90deg, #240D18 25%, #331323 50%, #240D18 75%);
+  background-size: 200% 100%;
+}
+
+[data-theme="dark"] .field-error {
+  color: #FCA5A5;
+}
+
+[data-theme="dark"] .form-control[aria-invalid="true"] {
+  border-color: #F87171;
+  background-color: rgba(248, 113, 113, 0.08);
+}
+
+[data-theme="dark"] .form-success {
+  border-color: var(--gold);
+  background-color: rgba(201, 162, 75, 0.12);
+}
+
+[data-theme="dark"] .map-iframe {
+  filter: invert(0.9) hue-rotate(180deg) saturate(0.75) contrast(0.95);
+}
+
