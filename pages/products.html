@@ -42,7 +42,13 @@
   <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
   <!-- Stylesheets -->
+  <!-- Core Base Stylesheet -->
   <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Isolated Viewport Stylesheets: Mobile (<768px), Tab (768px-1023px), 1024+ Views -->
+  <link rel="stylesheet" href="../assets/css/mobile.css" media="(max-width: 767.98px)">
+  <link rel="stylesheet" href="../assets/css/tablet.css" media="(min-width: 768px) and (max-width: 1023.98px)">
+  <link rel="stylesheet" href="../assets/css/desktop-1024.css" media="(min-width: 1024px)">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
 
@@ -62,7 +68,7 @@
   </script>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+
 
   <!-- Preloader -->
   <div class="preloader" aria-hidden="true">
@@ -168,13 +174,20 @@
     <div class="mobile-drawer__panel">
       <div>
         <div class="mobile-drawer__top">
-          <span class="brand-logo__name">ZARIYA</span>
-          <button type="button" class="icon-toggle js-menu-close" aria-label="Close navigation menu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </button>
+          <div class="mobile-drawer__actions">
+            <button type="button" class="icon-toggle js-theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+            <button type="button" class="icon-toggle js-rtl-toggle" aria-label="Switch to Right-to-Left layout" aria-pressed="false" title="Switch layout direction">
+              <span class="js-rtl-label">RTL</span>
+            </button>
+            <button type="button" class="icon-toggle js-menu-close" aria-label="Close navigation menu" title="Close navigation menu">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
         </div>
         <nav class="mobile-drawer__links" aria-label="Mobile Navigation Links">
           <a href="index.html" class="mobile-drawer__link">Home 1</a>
@@ -240,7 +253,13 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 8 7l-4 2 2 4 2-1v9h8v-9l2 1 2-4-4-2-4-4Z"/></svg>
               </span>
               <h3 class="tilt-card__title">Kurtis</h3>
+              <div class="tilt-card__meta-bar">24+ Curated Designs · Starts ₹2,850</div>
               <p class="tilt-card__desc">Straight-Cut, Anarkali, A-Line, Printed, Embroidered, and Short Kurtis tailored in breathable handlooms.</p>
+              <div class="tilt-card__chips">
+                <span class="feat-pill">Chanderi &amp; Mulmul</span>
+                <span class="feat-pill">Zari &amp; Resham</span>
+                <span class="feat-pill feat-pill--accent">Ready to Wear</span>
+              </div>
               <div class="tilt-card__actions">
                 <a href="#all-products" class="editorial-link js-jump-category" data-target-category="Kurtis">
                   <span>Explore Category</span>
@@ -263,7 +282,13 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 2 3 6 6 .8-4.4 4.3 1 6.2L12 16.4 6.4 19.3l1-6.2L3 8.8 9 8l3-6Z"/></svg>
               </span>
               <h3 class="tilt-card__title">Lehengas</h3>
+              <div class="tilt-card__meta-bar">18+ Bridal &amp; Festive Designs · Starts ₹24,500</div>
               <p class="tilt-card__desc">Bridal, Party Wear, Embroidered, Banarasi Silk, Lightweight Organza, and Designer Lehengas.</p>
+              <div class="tilt-card__chips">
+                <span class="feat-pill">Banarasi &amp; Raw Silk</span>
+                <span class="feat-pill">Master Zardozi</span>
+                <span class="feat-pill feat-pill--accent">Custom Blouse Fit</span>
+              </div>
               <div class="tilt-card__actions">
                 <a href="#all-products" class="editorial-link js-jump-category" data-target-category="Lehengas">
                   <span>Explore Category</span>
@@ -286,7 +311,13 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5c2.5 3.5 6 6 6 10.5a6 6 0 1 1-12 0c0-4.5 3.5-7 6-10.5Z"/></svg>
               </span>
               <h3 class="tilt-card__title">Salwar Suits</h3>
+              <div class="tilt-card__meta-bar">32+ Coordinated 3-Piece Sets · Starts ₹8,900</div>
               <p class="tilt-card__desc">Anarkali, Straight-Cut, Palazzo, Churidar, Sharara, and Embroidered Suit Sets with heirloom dupattas.</p>
+              <div class="tilt-card__chips">
+                <span class="feat-pill">Sharara &amp; Palazzo</span>
+                <span class="feat-pill">Pure Organza Dupatta</span>
+                <span class="feat-pill feat-pill--accent">Express Dispatch</span>
+              </div>
               <div class="tilt-card__actions">
                 <a href="#all-products" class="editorial-link js-jump-category" data-target-category="Salwar Suits">
                   <span>Explore Category</span>
@@ -475,6 +506,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 8 7l-4 2 2 4 2-1v9h8v-9l2 1 2-4-4-2-4-4Z"/></svg></span>
               <span class="tilt-card__subcat">Straight-Cut Kurtis</span>
               <h3 class="tilt-card__title">Noor Chanderi Straight-Cut Kurti</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Chanderi Silk</span><span class="spec-sep">•</span><span class="spec-tag">Hand Zari Placket</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">Kurti + Cotton Slip</span><span class="feat-pill feat-pill--accent">24h Dispatch</span></div>
               <p class="tilt-card__price ltr-num">₹4,850</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">XS</span><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span>
@@ -510,6 +543,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 8 7l-4 2 2 4 2-1v9h8v-9l2 1 2-4-4-2-4-4Z"/></svg></span>
               <span class="tilt-card__subcat">Anarkali Kurtis</span>
               <h3 class="tilt-card__title">Meher Zari Anarkali Kurti</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Mulberry Silk</span><span class="spec-sep">•</span><span class="spec-tag">Fine Tilla Borders</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">Flared Silhouette</span><span class="feat-pill feat-pill--accent">Bestseller Edit</span></div>
               <p class="tilt-card__price ltr-num">₹7,400</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span>
@@ -545,6 +580,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 8 7l-4 2 2 4 2-1v9h8v-9l2 1 2-4-4-2-4-4Z"/></svg></span>
               <span class="tilt-card__subcat">Embroidered Kurtis</span>
               <h3 class="tilt-card__title">Aafreen Resham Embroidered Kurti</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Pure Organza</span><span class="spec-sep">•</span><span class="spec-tag">Hand Resham Florals</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">Sheer Yoke &amp; Sleeves</span><span class="feat-pill feat-pill--accent">Limited Edition</span></div>
               <p class="tilt-card__price ltr-num">₹6,200</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">XS</span><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span>
@@ -580,6 +617,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 8 7l-4 2 2 4 2-1v9h8v-9l2 1 2-4-4-2-4-4Z"/></svg></span>
               <span class="tilt-card__subcat">Printed &amp; A-Line Kurtis</span>
               <h3 class="tilt-card__title">Saanjh Handblock A-Line Kurti</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Cotton Mulmul</span><span class="spec-sep">•</span><span class="spec-tag">Sanganeri Handblock</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">Breathable Daywear</span><span class="feat-pill feat-pill--accent">Natural Dyes</span></div>
               <p class="tilt-card__price ltr-num">₹3,650</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span><span class="size-chip">XXL</span>
@@ -615,6 +654,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 2 3 6 6 .8-4.4 4.3 1 6.2L12 16.4 6.4 19.3l1-6.2L3 8.8 9 8l3-6Z"/></svg></span>
               <span class="tilt-card__subcat">Bridal Lehengas</span>
               <h3 class="tilt-card__title">Ruhani Royal Zardozi Lehenga</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Pure Raw Silk</span><span class="spec-sep">•</span><span class="spec-tag">Master Antique Zardozi</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">Lehenga + Choli + 2 Dupattas</span><span class="feat-pill feat-pill--accent">Bespoke Fit</span></div>
               <p class="tilt-card__price ltr-num">₹68,500</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">XS</span><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span>
@@ -650,6 +691,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 2 3 6 6 .8-4.4 4.3 1 6.2L12 16.4 6.4 19.3l1-6.2L3 8.8 9 8l3-6Z"/></svg></span>
               <span class="tilt-card__subcat">Party Wear Lehengas</span>
               <h3 class="tilt-card__title">Sitara Mirror-Work Lehenga</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Crêpe Georgette</span><span class="spec-sep">•</span><span class="spec-tag">Abhla Mirror Embroidery</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">16-Kali High Flare</span><span class="feat-pill feat-pill--accent">Sangeet Ready</span></div>
               <p class="tilt-card__price ltr-num">₹34,900</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">XS</span><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span>
@@ -685,6 +728,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 2 3 6 6 .8-4.4 4.3 1 6.2L12 16.4 6.4 19.3l1-6.2L3 8.8 9 8l3-6Z"/></svg></span>
               <span class="tilt-card__subcat">Silk Lehengas</span>
               <h3 class="tilt-card__title">Kanak Banarasi Silk Lehenga</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Banarasi Katan Silk</span><span class="spec-sep">•</span><span class="spec-tag">Gold Zari Kadhwa Weave</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">Woven Brocade Dupatta</span><span class="feat-pill feat-pill--accent">Heritage Loom</span></div>
               <p class="tilt-card__price ltr-num">₹46,000</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span>
@@ -720,6 +765,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 2 3 6 6 .8-4.4 4.3 1 6.2L12 16.4 6.4 19.3l1-6.2L3 8.8 9 8l3-6Z"/></svg></span>
               <span class="tilt-card__subcat">Lightweight Lehengas</span>
               <h3 class="tilt-card__title">Pankhuri Organza Lehenga</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Tissue Organza</span><span class="spec-sep">•</span><span class="spec-tag">Gota Patti &amp; Foil Foliage</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">Featherlight Weight</span><span class="feat-pill feat-pill--accent">Cocktail Wear</span></div>
               <p class="tilt-card__price ltr-num">₹24,500</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">XS</span><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span>
@@ -755,6 +802,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5c2.5 3.5 6 6 6 10.5a6 6 0 1 1-12 0c0-4.5 3.5-7 6-10.5Z"/></svg></span>
               <span class="tilt-card__subcat">Anarkali &amp; Churidar Suits</span>
               <h3 class="tilt-card__title">Zeba Floor-Length Anarkali Suit</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Mulberry Silk</span><span class="spec-sep">•</span><span class="spec-tag">Intricate Dabka Yoke</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">3-Piece: Anarkali+Pant+Dupatta</span><span class="feat-pill feat-pill--accent">Ready to Ship</span></div>
               <p class="tilt-card__price ltr-num">₹18,900</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span>
@@ -790,6 +839,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5c2.5 3.5 6 6 6 10.5a6 6 0 1 1-12 0c0-4.5 3.5-7 6-10.5Z"/></svg></span>
               <span class="tilt-card__subcat">Sharara Suits</span>
               <h3 class="tilt-card__title">Inaya Gota-Patti Sharara Suit</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Chanderi Silk</span><span class="spec-sep">•</span><span class="spec-tag">Jaipuri Gota Kiran</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">3-Piece: Short Kurta+Sharara+Dupatta</span><span class="feat-pill feat-pill--accent">Festive Edit</span></div>
               <p class="tilt-card__price ltr-num">₹21,500</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">XS</span><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span>
@@ -825,6 +876,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5c2.5 3.5 6 6 6 10.5a6 6 0 1 1-12 0c0-4.5 3.5-7 6-10.5Z"/></svg></span>
               <span class="tilt-card__subcat">Straight-Cut &amp; Palazzo Suits</span>
               <h3 class="tilt-card__title">Nazakat Straight-Cut Palazzo Suit</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Georgette &amp; Chiffon</span><span class="spec-sep">•</span><span class="spec-tag">Subtle Cutdana Motifs</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">3-Piece: Kurta+Palazzo+Dupatta</span><span class="feat-pill feat-pill--accent">Day-to-Dinner</span></div>
               <p class="tilt-card__price ltr-num">₹12,800</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span><span class="size-chip">XXL</span>
@@ -860,6 +913,8 @@
               <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5c2.5 3.5 6 6 6 10.5a6 6 0 1 1-12 0c0-4.5 3.5-7 6-10.5Z"/></svg></span>
               <span class="tilt-card__subcat">Embroidered Suit Sets</span>
               <h3 class="tilt-card__title">Falak Velvet Embroidered Suit Set</h3>
+              <div class="tilt-card__specs"><span class="spec-tag">Micro Velvet</span><span class="spec-sep">•</span><span class="spec-tag">Kashmiri Tilla Handwork</span></div>
+              <div class="tilt-card__features"><span class="feat-pill">3-Piece: Kurta+Pant+Organza Dupatta</span><span class="feat-pill feat-pill--accent">Winter Royal</span></div>
               <p class="tilt-card__price ltr-num">₹26,400</p>
               <div class="tilt-card__sizes" aria-label="Available sizes">
                 <span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span>
@@ -894,7 +949,14 @@
             <div class="collection-banner__body">
               <span class="eyebrow eyebrow--start" style="color: var(--gold-light); margin-block-end: 0.4rem;">Capsule 01</span>
               <h3>Everyday Essentials</h3>
-              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); max-width: 44ch; margin-block: 0.4rem 0.9rem;">Featherlight cotton-mulmul and handspun Chanderi kurtis designed for effortless poise from morning to dusk.</p>
+              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); max-width: 44ch; margin-block: 0.4rem 0.5rem;">Featherlight cotton-mulmul and handspun Chanderi kurtis designed for effortless poise from morning to dusk.</p>
+              <div class="collection-banner__pills">
+                <span class="col-pill col-pill--price">From ₹2,850</span>
+                <span class="col-pill">18 Silhouettes</span>
+                <span class="col-pill">Mulmul &amp; Chanderi</span>
+                <span class="col-pill">Resham Yokes</span>
+                <span class="col-pill col-pill--badge">24h Dispatch</span>
+              </div>
               <a href="#all-products" class="editorial-link js-collection-trigger" data-filter-occasion="Everyday" style="color: var(--gold-light);">
                 <span>Filter Capsule</span>
                 <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -912,7 +974,13 @@
             <div class="collection-banner__body">
               <span class="eyebrow eyebrow--start" style="color: var(--gold-light); margin-block-end: 0.4rem;">Capsule 02</span>
               <h3>Elegant Ethnic Sets</h3>
-              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); margin-block: 0.4rem 0.9rem;">Three-piece straight-cut, sharara, and palazzo ensembles matched with woven silk dupattas.</p>
+              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); margin-block: 0.4rem 0.5rem;">Three-piece straight-cut, sharara, and palazzo ensembles matched with woven silk dupattas.</p>
+              <div class="collection-banner__pills">
+                <span class="col-pill col-pill--price">From ₹5,400</span>
+                <span class="col-pill">3-Piece Co-ords</span>
+                <span class="col-pill">Gota Patti &amp; Resham</span>
+                <span class="col-pill col-pill--badge">Custom Fit Available</span>
+              </div>
               <a href="#all-products" class="editorial-link js-collection-trigger" data-filter-occasion="Family Gathering" style="color: var(--gold-light);">
                 <span>Filter Capsule</span>
                 <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -930,7 +998,13 @@
             <div class="collection-banner__body">
               <span class="eyebrow eyebrow--start" style="color: var(--gold-light); margin-block-end: 0.4rem;">Capsule 03</span>
               <h3>Premium Embroidery</h3>
-              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); margin-block: 0.4rem 0.9rem;">Master karigar dabka, tilla, mirror-work, and resham pieces worthy of heirloom status.</p>
+              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); margin-block: 0.4rem 0.5rem;">Master karigar dabka, tilla, mirror-work, and resham pieces worthy of heirloom status.</p>
+              <div class="collection-banner__pills">
+                <span class="col-pill col-pill--price">From ₹8,900</span>
+                <span class="col-pill">Hand Dabka &amp; Zardozi</span>
+                <span class="col-pill">Pure Mulberry Silk</span>
+                <span class="col-pill col-pill--badge">Master Karigar Edit</span>
+              </div>
               <a href="#all-products" class="editorial-link js-collection-trigger" data-filter-occasion="Festive" style="color: var(--gold-light);">
                 <span>Filter Capsule</span>
                 <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -948,8 +1022,113 @@
             <div class="collection-banner__body">
               <span class="eyebrow eyebrow--start" style="color: var(--gold-light); margin-block-end: 0.4rem;">Capsule 04</span>
               <h3>Wedding Guest Outfits</h3>
-              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); max-width: 44ch; margin-block: 0.4rem 0.9rem;">Show-stopping Banarasi silk lehengas, cocktail mirror-work drapes, and regal Anarkalis for sangeet to reception.</p>
+              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); max-width: 44ch; margin-block: 0.4rem 0.5rem;">Show-stopping Banarasi silk lehengas, cocktail mirror-work drapes, and regal Anarkalis for sangeet to reception.</p>
+              <div class="collection-banner__pills">
+                <span class="col-pill col-pill--price">From ₹12,500</span>
+                <span class="col-pill">Banarasi Kadhwa</span>
+                <span class="col-pill">Mirror &amp; Mukaish</span>
+                <span class="col-pill">Sangeet to Reception</span>
+                <span class="col-pill col-pill--badge">Complimentary Stylist</span>
+              </div>
               <a href="#all-products" class="editorial-link js-collection-trigger" data-filter-occasion="Wedding" style="color: var(--gold-light);">
+                <span>Filter Capsule</span>
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Capsule 5: Royal Banarasi Heirlooms -->
+          <article class="collection-banner">
+            <picture>
+              <source srcset="../assets/images/products-col-royal-banarasi.webp" type="image/webp">
+              <img src="../assets/images/products-col-royal-banarasi.jpg" alt="Royal Banarasi Heirlooms featuring antique zari kadhwa silk weaves" width="900" height="600" loading="lazy">
+            </picture>
+            <div class="collection-banner__shade" aria-hidden="true"></div>
+            <div class="collection-banner__body">
+              <span class="eyebrow eyebrow--start" style="color: var(--gold-light); margin-block-end: 0.4rem;">Capsule 05</span>
+              <h3>Royal Banarasi Heirlooms</h3>
+              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); max-width: 44ch; margin-block: 0.4rem 0.5rem;">Pure Katan silk and antique zari brocades hand-loomed by generational master weavers of Varanasi.</p>
+              <div class="collection-banner__pills">
+                <span class="col-pill col-pill--price">From ₹16,800</span>
+                <span class="col-pill">14 Heirloom Silhouettes</span>
+                <span class="col-pill">Pure Katan &amp; Georgette</span>
+                <span class="col-pill">Gold Zari Kadhwa</span>
+                <span class="col-pill col-pill--badge">Silk Mark Certified</span>
+              </div>
+              <a href="#all-products" class="editorial-link js-collection-trigger" data-filter-occasion="Wedding" style="color: var(--gold-light);">
+                <span>Filter Capsule</span>
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Capsule 6: Cocktail & Sangeet Soirée -->
+          <article class="collection-banner">
+            <picture>
+              <source srcset="../assets/images/products-col-cocktail-sangeet.webp" type="image/webp">
+              <img src="../assets/images/products-col-cocktail-sangeet.jpg" alt="Cocktail and Sangeet Soiree ensembles with mirror work and modern high-flare silhouettes" width="700" height="600" loading="lazy">
+            </picture>
+            <div class="collection-banner__shade" aria-hidden="true"></div>
+            <div class="collection-banner__body">
+              <span class="eyebrow eyebrow--start" style="color: var(--gold-light); margin-block-end: 0.4rem;">Capsule 06</span>
+              <h3>Cocktail &amp; Sangeet Soirée</h3>
+              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); margin-block: 0.4rem 0.5rem;">Modern pre-draped silhouettes, high-flare metallic kalis, and scintillating mirror-work cut for illuminated nights.</p>
+              <div class="collection-banner__pills">
+                <span class="col-pill col-pill--price">From ₹9,200</span>
+                <span class="col-pill">Abhla Mirror &amp; Cutdana</span>
+                <span class="col-pill">16-Kali Flair</span>
+                <span class="col-pill col-pill--badge">Ready to Wear</span>
+              </div>
+              <a href="#all-products" class="editorial-link js-collection-trigger" data-filter-occasion="Party" style="color: var(--gold-light);">
+                <span>Filter Capsule</span>
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Capsule 7: Artisanal Chikankari & Pastels -->
+          <article class="collection-banner">
+            <picture>
+              <source srcset="../assets/images/products-col-chikankari-organza.webp" type="image/webp">
+              <img src="../assets/images/products-col-chikankari-organza.jpg" alt="Artisanal Lucknowi Chikankari in sheer organza with pearl and shadow work" width="700" height="600" loading="lazy">
+            </picture>
+            <div class="collection-banner__shade" aria-hidden="true"></div>
+            <div class="collection-banner__body">
+              <span class="eyebrow eyebrow--start" style="color: var(--gold-light); margin-block-end: 0.4rem;">Capsule 07</span>
+              <h3>Artisanal Chikankari &amp; Pastels</h3>
+              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); margin-block: 0.4rem 0.5rem;">Intricate Lucknowi shadow work and tonal pearls on sheer gossamer organza and modal mulmul in soothing blush and ivory hues.</p>
+              <div class="collection-banner__pills">
+                <span class="col-pill col-pill--price">From ₹4,600</span>
+                <span class="col-pill">Tonal Bakhiya &amp; Phanda</span>
+                <span class="col-pill">Pure Mukaish &amp; Pearls</span>
+                <span class="col-pill col-pill--badge">GI Certified</span>
+              </div>
+              <a href="#all-products" class="editorial-link js-collection-trigger" data-filter-occasion="Family Gathering" style="color: var(--gold-light);">
+                <span>Filter Capsule</span>
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Capsule 8: Festive Velvet & Winter Brocades -->
+          <article class="collection-banner">
+            <picture>
+              <source srcset="../assets/images/products-col-velvet-brocade.webp" type="image/webp">
+              <img src="../assets/images/products-col-velvet-brocade.jpg" alt="Festive Velvet and Winter Brocades with antique Kashmiri tilla embroidery" width="900" height="600" loading="lazy">
+            </picture>
+            <div class="collection-banner__shade" aria-hidden="true"></div>
+            <div class="collection-banner__body">
+              <span class="eyebrow eyebrow--start" style="color: var(--gold-light); margin-block-end: 0.4rem;">Capsule 08</span>
+              <h3>Festive Velvet &amp; Brocades</h3>
+              <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.88); max-width: 44ch; margin-block: 0.4rem 0.5rem;">Opulent jewel-toned micro-velvets trimmed with antique Kashmiri tilla, beaten gold borders, and heirloom silk organza drapes.</p>
+              <div class="collection-banner__pills">
+                <span class="col-pill col-pill--price">From ₹14,500</span>
+                <span class="col-pill">Plush Micro Velvet</span>
+                <span class="col-pill">Kashmiri Tilla Work</span>
+                <span class="col-pill">Sapphire &amp; Wine</span>
+                <span class="col-pill col-pill--badge">Royal Winter Edit</span>
+              </div>
+              <a href="#all-products" class="editorial-link js-collection-trigger" data-filter-occasion="Festive" style="color: var(--gold-light);">
                 <span>Filter Capsule</span>
                 <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </a>
@@ -1022,82 +1201,135 @@
       </div>
     </div>
 
-    <!-- 7. SHOPPING ASSISTANCE (Atelier Concierge Split Layout + Size Chart) -->
-    <section class="section" aria-labelledby="shopping-assistance-heading">
+    <!-- 7. BOUTIQUE CONCIERGE & SHOPPING ASSISTANCE -->
+    <section class="section surface-alt" aria-labelledby="shopping-assistance-heading">
       <div class="container">
-        <div class="assistance-split">
-          <div class="reveal-up">
+        <div class="concierge-showcase">
+          <div class="concierge-showcase__content reveal-up">
             <span class="eyebrow eyebrow--start">Boutique Concierge</span>
             <h2 id="shopping-assistance-heading">Shopping Assistance</h2>
-            <p class="lead-text" style="margin-block: var(--space-2) var(--space-4);">Every body and celebration is unique. Our Mumbai salon stylists and master tailors guide you through measurements, custom sleeve or neckline preferences, and silk care before you confirm your order.</p>
-            <div style="border: 1px solid var(--border-gold); overflow: hidden; aspect-ratio: 4 / 3; margin-block-end: var(--space-4);">
+            <div class="ornate-divider" aria-hidden="true" style="justify-content: flex-start; margin-block: var(--space-2) var(--space-3);"><span class="ornate-diamond"></span></div>
+            <p class="lead-text" style="margin-block-end: var(--space-3); max-width: 58ch;">Every body and celebration is unique. Our Mayfair salon stylists and master tailors guide you through measurements, custom sleeve or neckline preferences, and silk care before you confirm your order.</p>
+            <div class="concierge-features">
+              <div class="concierge-feature">
+                <span class="concierge-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a5 5 0 0 1 5 5v3a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5Z"/><path d="M19 11v1a7 7 0 0 1-14 0v-1"/><path d="M12 19v3"/></svg>
+                </span>
+                <div>
+                  <strong>Bespoke Styling Consultation</strong>
+                  <p>Personalized silhouette and color curation matched to your upcoming event.</p>
+                </div>
+              </div>
+              <div class="concierge-feature">
+                <span class="concierge-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 14.14 14.14"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </span>
+                <div>
+                  <strong>Master Tailor Custom Fitting</strong>
+                  <p>1.5-inch interior seam allowance &amp; complimentary custom blouse adjustments.</p>
+                </div>
+              </div>
+              <div class="concierge-feature">
+                <span class="concierge-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                </span>
+                <div>
+                  <strong>Insured Express Delivery</strong>
+                  <p>White-glove packaging with end-to-end tracking to your doorstep worldwide.</p>
+                </div>
+              </div>
+            </div>
+            <div class="btn-group" style="margin-block-start: var(--space-4);">
+              <a href="contact.html" class="btn btn-primary btn-magnetic">
+                <span>Book Salon Appointment</span>
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="https://wa.me/447700900123?text=Hello%20Zariya%20Boutique%2C%20I%20would%20love%20styling%20assistance%20for%20my%20order." class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                <span>WhatsApp Stylist</span>
+              </a>
+            </div>
+          </div>
+          <div class="concierge-showcase__media reveal-up">
+            <div class="concierge-image-frame">
               <picture>
                 <source srcset="../assets/images/products-atelier-assistance.webp" type="image/webp">
                 <img src="../assets/images/products-atelier-assistance.jpg" alt="Zariya boutique stylist preparing handwoven silk fabric swatches and bespoke tailoring measurements" width="800" height="600" loading="lazy">
               </picture>
+              <div class="concierge-badge">
+                <span class="concierge-badge__num">100%</span>
+                <span class="concierge-badge__lbl">Artisan Handloom Guarantee</span>
+              </div>
             </div>
-            <a href="contact.html" class="btn btn-primary btn-magnetic">
-              <span>Contact Our Boutique</span>
-              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SIZE GUIDANCE & CLIENT SERVICES (Centered Full-Width Accordions) -->
+    <section class="section" aria-labelledby="client-services-heading">
+      <div class="container">
+        <header class="section-header reveal-up">
+          <span class="eyebrow">Fitting &amp; Care Details</span>
+          <h2 id="client-services-heading">Size Guidance &amp; Client Services</h2>
+          <div class="ornate-divider" aria-hidden="true"><span class="ornate-diamond"></span></div>
+          <p class="section-intro" style="max-width: 60ch; margin-inline: auto;">Comprehensive body measurements, handloom authenticity notes, video consultation scheduling, and hassle-free exchange policies.</p>
+        </header>
+
+        <div class="accordions-centered reveal-up">
+          <!-- Item 1: Size Guidance -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger js-accordion-trigger" aria-expanded="true" aria-controls="assist-panel-1">
+              <span>Size Guidance &amp; Custom Fitting</span>
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" id="assist-panel-1">
+              <p>All Zariya garments include a generous 1.5-inch interior seam allowance for effortless future adjustments. Complementary custom hemming and blouse tailoring are available on bridal and festive orders.</p>
+              <table class="size-table" aria-label="Zariya Women's Body Measurement Guide in Inches">
+                <thead>
+                  <tr><th>Size</th><th>Bust (in)</th><th>Waist (in)</th><th>Hip (in)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>XS</td><td>32</td><td>26</td><td>35</td></tr>
+                  <tr><td>S</td><td>34</td><td>28</td><td>37</td></tr>
+                  <tr><td>M</td><td>36</td><td>30</td><td>39</td></tr>
+                  <tr><td>L</td><td>38</td><td>32</td><td>41</td></tr>
+                  <tr><td>XL</td><td>40</td><td>34</td><td>43</td></tr>
+                  <tr><td>XXL</td><td>42</td><td>36</td><td>45</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div class="reveal-up">
-            <!-- Item 1: Size Guidance -->
-            <div class="accordion-item">
-              <button type="button" class="accordion-trigger js-accordion-trigger" aria-expanded="true" aria-controls="assist-panel-1">
-                <span>Size Guidance &amp; Custom Fitting</span>
-                <span aria-hidden="true">+</span>
-              </button>
-              <div class="accordion-panel" id="assist-panel-1">
-                <p>All Zariya garments include a generous 1.5-inch interior seam allowance for effortless future adjustments. Complementary custom hemming and blouse tailoring are available on bridal and festive orders.</p>
-                <table class="size-table" aria-label="Zariya Women's Body Measurement Guide in Inches">
-                  <thead>
-                    <tr><th>Size</th><th>Bust (in)</th><th>Waist (in)</th><th>Hip (in)</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>XS</td><td>32</td><td>26</td><td>35</td></tr>
-                    <tr><td>S</td><td>34</td><td>28</td><td>37</td></tr>
-                    <tr><td>M</td><td>36</td><td>30</td><td>39</td></tr>
-                    <tr><td>L</td><td>38</td><td>32</td><td>41</td></tr>
-                    <tr><td>XL</td><td>40</td><td>34</td><td>43</td></tr>
-                    <tr><td>XXL</td><td>42</td><td>36</td><td>45</td></tr>
-                  </tbody>
-                </table>
-              </div>
+          <!-- Item 2: Fabric Details -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger js-accordion-trigger" aria-expanded="false" aria-controls="assist-panel-2">
+              <span>Authentic Loom &amp; Fabric Details</span>
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" id="assist-panel-2" hidden>
+              <p>Our pure Banarasi silks, handloom Chanderis, raw mulberry silks, and cotton mulmuls are woven by artisan clusters. Subtle slubs and weave variations are hallmarks of genuine handloom textiles rather than defects.</p>
             </div>
+          </div>
 
-            <!-- Item 2: Fabric Details -->
-            <div class="accordion-item">
-              <button type="button" class="accordion-trigger js-accordion-trigger" aria-expanded="false" aria-controls="assist-panel-2">
-                <span>Authentic Loom &amp; Fabric Details</span>
-                <span aria-hidden="true">+</span>
-              </button>
-              <div class="accordion-panel" id="assist-panel-2" hidden>
-                <p>Our pure Banarasi silks, handloom Chanderis, raw mulberry silks, and cotton mulmuls are woven by artisan clusters. Subtle slubs and weave variations are hallmarks of genuine handloom textiles rather than defects.</p>
-              </div>
+          <!-- Item 3: Boutique Assistance -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger js-accordion-trigger" aria-expanded="false" aria-controls="assist-panel-3">
+              <span>One-on-One Video &amp; Salon Styling</span>
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" id="assist-panel-3" hidden>
+              <p>Request a live WhatsApp video walkthrough from our Mayfair salon to inspect true daylight fabric hues, zari lustre, and dupatta drape before placing your enquiry.</p>
             </div>
+          </div>
 
-            <!-- Item 3: Boutique Assistance -->
-            <div class="accordion-item">
-              <button type="button" class="accordion-trigger js-accordion-trigger" aria-expanded="false" aria-controls="assist-panel-3">
-                <span>One-on-One Video &amp; Salon Styling</span>
-                <span aria-hidden="true">+</span>
-              </button>
-              <div class="accordion-panel" id="assist-panel-3" hidden>
-                <p>Request a live WhatsApp video walkthrough from our Kala Ghoda salon to inspect true daylight fabric hues, zari lustre, and dupatta drape before placing your enquiry.</p>
-              </div>
-            </div>
-
-            <!-- Item 4: Exchange Policy & Customer Support -->
-            <div class="accordion-item">
-              <button type="button" class="accordion-trigger js-accordion-trigger" aria-expanded="false" aria-controls="assist-panel-4">
-                <span>Exchange Policy &amp; Dedicated Support</span>
-                <span aria-hidden="true">+</span>
-              </button>
-              <div class="accordion-panel" id="assist-panel-4" hidden>
-                <p>Standard ready-to-wear sizes are eligible for a hassle-free 7-day size exchange or boutique credit in unworn condition with original tags intact. Dedicated concierge support is available Tuesday–Sunday, 11:00 AM – 8:30 PM IST.</p>
-              </div>
+          <!-- Item 4: Exchange Policy & Customer Support -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger js-accordion-trigger" aria-expanded="false" aria-controls="assist-panel-4">
+              <span>Exchange Policy &amp; Dedicated Support</span>
+              <span aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" id="assist-panel-4" hidden>
+              <p>Standard ready-to-wear sizes are eligible for a hassle-free 7-day size exchange or boutique credit in unworn condition with original tags intact. Dedicated concierge support is available Tuesday–Sunday, 11:00 AM – 8:30 PM IST.</p>
             </div>
           </div>
         </div>
@@ -1169,7 +1401,7 @@
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </a>
-            <a href="https://wa.me/919820012345?text=Hello%20Zariya%20Boutique%2C%20I%20would%20love%20styling%20assistance." class="social-icon-btn social-icon-btn--wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with Zariya on WhatsApp" title="WhatsApp">
+            <a href="https://wa.me/447700900123?text=Hello%20Zariya%20Boutique%2C%20I%20would%20love%20styling%20assistance." class="social-icon-btn social-icon-btn--wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with Zariya on WhatsApp" title="WhatsApp">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.477-.15-.678.15-.2.301-.778.979-.954 1.18-.175.2-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.895-.799-1.5-1.786-1.675-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.1-.2.05-.376-.025-.526-.075-.15-.678-1.634-.929-2.238-.244-.588-.493-.508-.678-.518-.175-.01-.376-.01-.577-.01-.2 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.513s1.08 2.915 1.23 3.116c.15.2 2.126 3.246 5.15 4.554.72.311 1.282.497 1.72.637.724.23 1.382.197 1.902.12.58-.087 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.042 21.666a9.58 9.58 0 0 1-4.887-1.332l-.35-.208-3.633.953.97-3.542-.228-.363a9.602 9.602 0 0 1-1.472-5.132c0-5.304 4.316-9.62 9.62-9.62a9.577 9.577 0 0 1 6.8 2.82 9.585 9.585 0 0 1 2.818 6.802c0 5.306-4.316 9.622-9.638 9.622zm8.384-18.006A11.758 11.758 0 0 0 12.042 0C5.402 0 .009 5.393.009 12.033a11.97 11.97 0 0 0 1.624 6.012L0 24l6.136-1.61a11.98 11.98 0 0 0 5.906 1.543h.005c6.64 0 12.033-5.393 12.033-12.033 0-3.214-1.252-6.236-3.524-8.238z"/>
               </svg>
@@ -1212,7 +1444,7 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 Zariya Heritage Boutique. All rights reserved.</p>
-        <p>24 Rampart Row, Kala Ghoda, Mumbai · <span class="ltr-num">+91 22 2284 7190</span></p>
+        <p>18 South Audley Street, Mayfair, London W1K 2PB · <span class="ltr-num">+44 20 7946 0920</span></p>
       </div>
     </div>
   </footer>
@@ -1224,7 +1456,7 @@
     </svg>
   </button>
 
-  <a href="https://wa.me/919820012345?text=Hello%20Zariya%20Boutique%2C%20I%20have%20a%20question%20about%20an%20outfit%20in%20your%20Products%20catalogue." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Zariya Boutique on WhatsApp">
+  <a href="https://wa.me/447700900123?text=Hello%20Zariya%20Boutique%2C%20I%20have%20a%20question%20about%20an%20outfit%20in%20your%20Products%20catalogue." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Zariya Boutique on WhatsApp">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/>
     </svg>

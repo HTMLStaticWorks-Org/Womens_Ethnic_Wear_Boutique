@@ -35,9 +35,19 @@
 [dir="rtl"] .closing-banner__overlay {
   background: linear-gradient(
     -90deg,
-    rgba(0, 0, 0, 0.55) 0%,
-    rgba(0, 0, 0, 0.25) 55%,
-    rgba(0, 0, 0, 0.05) 100%
+    rgba(0, 0, 0, 0.58) 0%,
+    rgba(0, 0, 0, 0.28) 55%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+}
+
+[dir="rtl"] .closing-banner--home2 .closing-banner__overlay {
+  background: linear-gradient(
+    -90deg,
+    rgba(25, 8, 15, 0.78) 0%,
+    rgba(25, 8, 15, 0.5) 45%,
+    rgba(25, 8, 15, 0.15) 80%,
+    rgba(25, 8, 15, 0.05) 100%
   );
 }
 
@@ -100,5 +110,14 @@
   direction: ltr;
   unicode-bidi: embed;
   display: inline-block;
+}
+
+[dir="rtl"] .concierge-badge {
+  right: auto;
+  left: var(--space-3);
+}
+
+[dir="rtl"] .concierge-feature {
+  text-align: start;
 }
 

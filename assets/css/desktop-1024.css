@@ -1,0 +1,548 @@
+/* ==========================================================================
+   ZARIYA — LUXURY WOMEN'S ETHNIC WEAR BOUTIQUE
+   1024+ DESKTOP VIEW STYLESHEET (Screen Width >= 1024px)
+   ==========================================================================
+   NOTE: All CSS rules in this file are strictly scoped to 1024+ VIEWS ONLY.
+   Making changes in this file will ONLY affect 1024+ Desktop views.
+   It will NEVER affect Mobile (< 768px) or Tab (768px - 1023px) views.
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+
+  /* --------------------------------------------------------------------------
+     1. TYPOGRAPHY & HEADINGS (1024+)
+     -------------------------------------------------------------------------- */
+  h1, .display-h1 {
+    font-size: clamp(3.2rem, 5.4vw, 4.75rem);
+    line-height: 1.12;
+  }
+
+  h2 {
+    font-size: clamp(2.35rem, 3.8vw, 3.35rem);
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+  }
+
+  h4 {
+    font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  }
+
+  .script-accent {
+    font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  }
+
+  .lead-text {
+    font-size: clamp(1.05rem, 1.35vw, 1.22rem);
+    line-height: 1.75;
+    max-width: 62ch;
+  }
+
+  /* --------------------------------------------------------------------------
+     2. CONTAINERS & SECTION SPACING (1024+)
+     -------------------------------------------------------------------------- */
+  .container {
+    padding-inline: var(--space-4);
+    max-width: var(--container-max);
+    width: 100%;
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      padding-inline: var(--space-5);
+    }
+  }
+
+  .section {
+    padding-block: var(--space-12); /* 96px */
+  }
+
+  .section-header {
+    margin-block-end: var(--space-6);
+    text-align: center;
+  }
+
+  .section-header--split {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: start;
+    gap: var(--space-2);
+  }
+
+  /* --------------------------------------------------------------------------
+     3. HEADER & NAVIGATION (Tab Pro 1024-1199px uses Hamburger Menu like Tab view; 1200+ Desktop)
+     -------------------------------------------------------------------------- */
+  .site-header {
+    height: var(--header-height);
+  }
+
+  /* In Tab Pro (1024px - 1199px), navbar keeps hamburger menu same as tab view */
+  .primary-nav {
+    display: none !important;
+  }
+
+  .header-cta {
+    display: none !important;
+  }
+
+  .site-header .header-actions > .js-theme-toggle,
+  .site-header .header-actions > .js-rtl-toggle {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: inline-flex !important;
+  }
+
+  .site-header .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .brand-logo__mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand-logo__name {
+    font-size: 1.55rem;
+  }
+
+  .brand-logo__sub {
+    font-size: 0.58rem;
+  }
+
+  /* Drawer panel styling for Tab Pro view */
+  .mobile-drawer__panel {
+    width: 380px;
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .mobile-drawer__top {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    padding-block-end: var(--space-3);
+    border-block-end: 1px solid var(--border-gold);
+  }
+
+  .mobile-drawer__actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 0.5rem !important;
+    margin-inline-start: auto !important;
+  }
+
+  .mobile-drawer__actions .icon-toggle,
+  .site-header .header-actions .menu-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .mobile-drawer__links {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .mobile-drawer__link {
+    font-size: 1.45rem;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .mobile-drawer__link:hover {
+    padding-inline-start: 0 !important;
+    color: var(--text-accent);
+  }
+
+  /* Full Desktop Navigation (1200px+) */
+  @media (min-width: 1200px) {
+    .primary-nav {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1.85rem;
+    }
+
+    .menu-toggle {
+      display: none !important;
+    }
+
+    .header-cta {
+      display: inline-flex !important;
+      padding: 0.75rem 1.45rem;
+      font-size: 0.78rem;
+    }
+
+    .site-header .header-actions > .js-theme-toggle,
+    .site-header .header-actions > .js-rtl-toggle {
+      display: inline-flex !important;
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     4. HERO LAYOUTS (1024+)
+     -------------------------------------------------------------------------- */
+  .hero-fullbleed {
+    min-height: clamp(580px, 86vh, 880px);
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-fullbleed--subpage {
+    min-height: clamp(460px, 66vh, 680px);
+  }
+
+  .hero-content {
+    max-width: 700px;
+    padding-block: var(--space-8);
+  }
+
+  .hero-split {
+    padding-block: var(--space-6) var(--space-10);
+  }
+
+  .hero-split__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: var(--space-8);
+  }
+
+  .hero-split__visual {
+    padding-inline-start: var(--space-3);
+  }
+
+  .hero-arch-frame {
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius-arch);
+  }
+
+  .hero-inset-card {
+    position: absolute;
+    inset-block-end: -24px;
+    inset-inline-start: 0;
+    width: clamp(140px, 34%, 210px);
+  }
+
+  .hero-split__stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2);
+    margin-block-start: var(--space-6);
+    padding-block-start: var(--space-3);
+  }
+
+  .hero-stat__num {
+    font-size: 1.9rem;
+  }
+
+  .hero-stat__label {
+    font-size: 0.75rem;
+  }
+
+  /* --------------------------------------------------------------------------
+     5. PRODUCT & CATEGORY CARDS (1024+: 3 AND 4 COLUMNS)
+     -------------------------------------------------------------------------- */
+  .cards-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .cards-grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  /* In Tab Pro (1024px - 1279px, 3 columns): align single last card to center */
+  .cards-grid-4 > :last-child:nth-child(3n + 1),
+  .cards-grid-4 > :nth-child(4):last-child,
+  .cards-grid-3 > :last-child:nth-child(3n + 1),
+  .cards-grid-3 > :nth-child(4):last-child {
+    grid-column: 2;
+  }
+
+  @media (min-width: 1280px) {
+    .cards-grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cards-grid-4 > :last-child:nth-child(3n + 1),
+    .cards-grid-4 > :nth-child(4):last-child,
+    .cards-grid-3 > :last-child:nth-child(3n + 1),
+    .cards-grid-3 > :nth-child(4):last-child {
+      grid-column: auto;
+    }
+  }
+
+  .tilt-card__body {
+    padding: var(--space-3) var(--space-3) var(--space-4);
+  }
+
+  /* --------------------------------------------------------------------------
+     6. EDITORIAL SECTIONS (HOME 1 1024+)
+     -------------------------------------------------------------------------- */
+  .editorial-rows {
+    gap: var(--space-12);
+  }
+
+  .editorial-row {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: var(--space-8);
+  }
+
+  .editorial-row--reverse .editorial-row__media {
+    order: 2;
+  }
+
+  .editorial-row--reverse .editorial-row__content {
+    order: 1;
+  }
+
+  .craft-composition {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-8);
+  }
+
+  .craft-visuals {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .stories-stage {
+    padding: var(--space-6);
+  }
+
+  .story-slide {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--space-8);
+  }
+
+  .closing-banner {
+    min-height: 600px;
+  }
+
+  @media (min-width: 1440px) {
+    .closing-banner {
+      min-height: 640px;
+    }
+  }
+
+  .closing-banner__inner {
+    padding-block: var(--space-8);
+    max-width: 760px;
+  }
+
+  /* --------------------------------------------------------------------------
+     7. HOME 2 DISTINCT EDITORIAL LAYOUTS (1024+)
+     -------------------------------------------------------------------------- */
+  .mood-triptych {
+    flex-direction: row;
+    height: 620px;
+    gap: var(--space-3);
+  }
+
+  .mood-panel {
+    flex: 1;
+    min-height: 420px;
+  }
+
+  .mood-panel:hover,
+  .mood-panel:focus-within {
+    flex: 1.55;
+  }
+
+  .mood-panel__content {
+    min-height: 310px;
+    padding: var(--space-4);
+  }
+
+  .mood-panel__content p {
+    min-height: 6.2em;
+  }
+
+  .filmstrip-track {
+    grid-auto-columns: 420px;
+  }
+
+  .occasion-spread {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8) var(--space-6);
+  }
+
+  .occasion-editorial:nth-child(even) {
+    margin-block-start: var(--space-8);
+  }
+
+  .look-builder {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: var(--space-8);
+  }
+
+  .masonry-gallery {
+    columns: 3;
+    column-gap: var(--space-3);
+  }
+
+  /* --------------------------------------------------------------------------
+     8. PRODUCTS PAGE (1024+)
+     -------------------------------------------------------------------------- */
+  .filter-controls-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+  }
+
+  @media (min-width: 1280px) {
+    .filter-controls-grid {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+
+  .collections-bento {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(360px, auto);
+    gap: var(--space-4);
+  }
+
+  .collection-banner:nth-child(4n + 1) { grid-column: span 7; }
+  .collection-banner:nth-child(4n + 2) { grid-column: span 5; }
+  .collection-banner:nth-child(4n + 3) { grid-column: span 5; }
+  .collection-banner:nth-child(4n + 4) { grid-column: span 7; }
+
+  .collection-banner {
+    min-height: 360px;
+  }
+
+  .product-modal__dialog {
+    width: min(1080px, 96vw);
+    padding: var(--space-5);
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr 1.05fr;
+    gap: var(--space-5);
+  }
+
+  .concierge-showcase {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-6);
+  }
+
+  .assistance-split {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: var(--space-8);
+  }
+
+  /* --------------------------------------------------------------------------
+     9. FESTIVE EDIT PAGE (1024+)
+     -------------------------------------------------------------------------- */
+  .color-story-shell {
+    padding: var(--space-6);
+  }
+
+  .color-story-panel {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: var(--space-8);
+  }
+
+  .styling-strip {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+  }
+
+  .styling-strip__item:nth-child(even) {
+    margin-block-start: var(--space-5);
+  }
+
+  /* --------------------------------------------------------------------------
+     10. CONTACT PAGE (1024+)
+     -------------------------------------------------------------------------- */
+  .ledger-row {
+    grid-template-columns: 180px 1fr;
+    gap: var(--space-3);
+  }
+
+  .map-iframe {
+    height: 420px;
+  }
+
+  .enquiry-layout {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--space-8);
+  }
+
+  .form-box {
+    padding: var(--space-5);
+  }
+
+  .form-grid--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-promenade {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .social-channel {
+    min-width: 0;
+  }
+
+  .social-channel:not(:last-child) {
+    border-inline-end: 1px solid var(--border-gold);
+    border-block-end: none;
+  }
+
+  /* --------------------------------------------------------------------------
+     11. UTILITY PAGES & FOOTER (1024+)
+     -------------------------------------------------------------------------- */
+  .utility-split {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: var(--space-8);
+  }
+
+  .countdown-bar {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+  }
+
+  .site-footer {
+    padding-block: var(--space-10) var(--space-4);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.4fr 0.9fr 0.9fr 1.2fr;
+    gap: var(--space-6);
+    padding-block-end: var(--space-6);
+  }
+
+  .newsletter-mini {
+    flex-direction: row;
+  }
+
+  .whatsapp-float span {
+    display: inline;
+  }
+
+  .whatsapp-float {
+    min-width: 52px;
+    min-height: 52px;
+    padding-inline: 1rem;
+    justify-content: flex-start;
+  }
+
+  .scroll-up-btn {
+    width: 48px;
+    height: 48px;
+    inset-block-end: calc(var(--space-3) + 60px);
+  }
+}
+

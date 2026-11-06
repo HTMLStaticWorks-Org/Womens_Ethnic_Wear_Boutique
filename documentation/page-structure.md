@@ -15,7 +15,7 @@
    - Our Signature Styles (Alternating editorial image/text rows: Embroidered Kurtis, Silk Anarkalis, Designer Lehengas, Elegant Straight-Cut Suits)
    - The Art of Indian Craftsmanship (Parallax loom composition + macro inset + 4-step process ledger)
    - Customer Style Stories (Interactive split portrait & pull-quote slider)
-   - Discover Your Signature Look (Closing banner + Kala Ghoda boutique invitation)
+   - Discover Your Signature Look (Closing banner + Mayfair boutique invitation)
 
 2. **`pages/home-2.html` (Home 2 — Contemporary Editorial Lookbook)**
    - The Fashion Statement Split-Screen Architectural Hero (`<h1>Tradition, Reimagined for Her.</h1>`)

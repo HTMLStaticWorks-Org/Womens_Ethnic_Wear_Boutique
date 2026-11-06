@@ -40,5 +40,24 @@ To switch fonts:
 - **Google Maps**:
   - Replace the `<iframe class="map-iframe" src="...">` embed URL in `pages/contact.html` with the iframe URL from Google Maps -> Share -> Embed a map.
 - **WhatsApp Concierge**:
-  - Replace `919820012345` in `https://wa.me/919820012345` links with your international WhatsApp Business number (digits only, no `+` sign).
+  - Replace `447700900123` in `https://wa.me/447700900123` links with your international WhatsApp Business number (digits only, no `+` sign).
+
+## 5. Viewport-Specific Styling Architecture (Mobile, Tab & 1024 Views)
+Responsive styles are strictly separated into dedicated stylesheets so edits in one viewport do not affect the others:
+
+1. **Mobile View (`assets/css/mobile.css`)**:
+   - Strictly active on screens **<= 767.98px** (`media="(max-width: 767.98px)"`).
+   - Edit this file for mobile-only adjustments (single-column cards, hamburger drawer layout, mobile padding, mobile hero heights). Changes will **NEVER** affect Tab or 1024+ views.
+
+2. **Tab / Tablet View (`assets/css/tablet.css`)**:
+   - Strictly active on screens **768px to 1023.98px** (`media="(min-width: 768px) and (max-width: 1023.98px)"`).
+   - Edit this file for tablet-only adjustments (2-column cards, tablet header CTA, tablet occasion spreads). Changes will **NEVER** affect Mobile or 1024+ views.
+
+3. **1024+ Desktop View (`assets/css/desktop-1024.css`)**:
+   - Strictly active on screens **>= 1024px** (`media="(min-width: 1024px)"`).
+   - Edit this file for desktop-only adjustments (full horizontal desktop navigation, 3 & 4 column cards, split heroes, expanding mood triptych). Changes will **NEVER** affect Mobile or Tab views.
+
+4. **Base Tokens & Shared Styles (`assets/css/style.css`)**:
+   - Holds shared CSS variables (`:root`), resets, typography families, color surfaces, and animations.
+
 

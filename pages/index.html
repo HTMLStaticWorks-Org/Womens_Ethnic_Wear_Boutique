@@ -42,7 +42,13 @@
   <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
   <!-- Stylesheets -->
+  <!-- Core Base Stylesheet -->
   <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Isolated Viewport Stylesheets: Mobile (<768px), Tab (768px-1023px), 1024+ Views -->
+  <link rel="stylesheet" href="../assets/css/mobile.css" media="(max-width: 767.98px)">
+  <link rel="stylesheet" href="../assets/css/tablet.css" media="(min-width: 768px) and (max-width: 1023.98px)">
+  <link rel="stylesheet" href="../assets/css/desktop-1024.css" media="(min-width: 1024px)">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
 
@@ -55,23 +61,23 @@
     "name": "Zariya Heritage Boutique",
     "description": "Luxury Women's Indian Ethnic Wear Boutique specializing in handcrafted Kurtis, Bridal & Festive Lehengas, and Silk Salwar Suits.",
     "url": "https://www.zariyaboutique.com/pages/index.html",
-    "telephone": "+91-22-2284-7190",
+    "telephone": "+44-20-7946-0920",
     "email": "concierge@zariyaboutique.com",
     "priceRange": "₹₹₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "24 Rampart Row, Kala Ghoda, Fort",
-      "addressLocality": "Mumbai",
-      "addressRegion": "Maharashtra",
-      "postalCode": "400001",
-      "addressCountry": "IN"
+      "streetAddress": "18 South Audley Street, Mayfair",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1K 2PB",
+      "addressCountry": "GB"
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "11:00",
-        "closes": "20:30"
+        "opens": "10:30",
+        "closes": "19:30"
       }
     ]
   }
@@ -79,7 +85,7 @@
 </head>
 <body>
   <!-- Accessible Skip Navigation Link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+
 
   <!-- Brand Monogram Preloader -->
   <div class="preloader" aria-hidden="true">
@@ -186,13 +192,20 @@
     <div class="mobile-drawer__panel">
       <div>
         <div class="mobile-drawer__top">
-          <span class="brand-logo__name">ZARIYA</span>
-          <button type="button" class="icon-toggle js-menu-close" aria-label="Close navigation menu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </button>
+          <div class="mobile-drawer__actions">
+            <button type="button" class="icon-toggle js-theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+            <button type="button" class="icon-toggle js-rtl-toggle" aria-label="Switch to Right-to-Left layout" aria-pressed="false" title="Switch layout direction">
+              <span class="js-rtl-label">RTL</span>
+            </button>
+            <button type="button" class="icon-toggle js-menu-close" aria-label="Close navigation menu" title="Close navigation menu">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
         </div>
         <nav class="mobile-drawer__links" aria-label="Mobile Navigation Links">
           <a href="index.html" class="mobile-drawer__link" aria-current="page">Home 1</a>
@@ -277,7 +290,44 @@
           <span class="marquee-item">Artisanal Weaves</span><span class="marquee-gem"></span>
           <span class="marquee-item">Royal Heirloom</span><span class="marquee-gem"></span>
         </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span class="marquee-item">Handcrafted</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Heritage</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Elegance</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Zardozi Handwork</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Pure Loom Silks</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Timeless Silhouettes</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Artisanal Weaves</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Royal Heirloom</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Handcrafted</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Heritage</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Elegance</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Zardozi Handwork</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Pure Loom Silks</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Timeless Silhouettes</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Artisanal Weaves</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Royal Heirloom</span><span class="marquee-gem"></span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span class="marquee-item">Handcrafted</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Heritage</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Elegance</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Zardozi Handwork</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Pure Loom Silks</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Timeless Silhouettes</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Artisanal Weaves</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Royal Heirloom</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Handcrafted</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Heritage</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Elegance</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Zardozi Handwork</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Pure Loom Silks</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Timeless Silhouettes</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Artisanal Weaves</span><span class="marquee-gem"></span>
+          <span class="marquee-item">Royal Heirloom</span><span class="marquee-gem"></span>
+        </div>
       </div>
+    </div>
     </div>
 
     <!-- 2. SHOP BY CATEGORY (3D Tilt Cards, Centered Icons & Text) -->
@@ -674,7 +724,7 @@
             <div>
               <div class="story-quote-mark" aria-hidden="true">“</div>
               <blockquote class="story-quote">The drape of my mulberry silk Anarkali felt weightless through six hours of wedding festivities. Every guest asked about the antique zardozi border—the fit around the shoulders and waist felt bespoke right off the rack.</blockquote>
-              <p class="story-author">Ananya Kulkarni · Mumbai</p>
+              <p class="story-author">Ananya Kulkarni · London</p>
               <p class="story-garment">Wore the Virasat Silk Anarkali Set · Verified Boutique Patron</p>
             </div>
           </article>
@@ -690,7 +740,7 @@
             <div>
               <div class="story-quote-mark" aria-hidden="true">“</div>
               <blockquote class="story-quote">I wanted a daytime wedding lehenga that looked regal without feeling heavy. The pure organza skirt and fine resham embroidery were breathtaking in natural sunlight, and the breathable mulmul lining was a dream.</blockquote>
-              <p class="story-author">Meera Rajadhyaksha · Bengaluru</p>
+              <p class="story-author">Meera Rajadhyaksha · Dubai</p>
               <p class="story-garment">Wore the Pankhuri Organza Lehenga · Verified Boutique Patron</p>
             </div>
           </article>
@@ -706,7 +756,7 @@
             <div>
               <div class="story-quote-mark" aria-hidden="true">“</div>
               <blockquote class="story-quote">Zariya's Chanderi kurtis have spoiled me for anything else. You can immediately feel the authenticity of the handloom weave and neat inner finishing—even after multiple wears, the zari lustre looks untouched.</blockquote>
-              <p class="story-author">Kavya Sethi · New Delhi</p>
+              <p class="story-author">Kavya Sethi · New York</p>
               <p class="story-garment">Wore the Noor Chanderi Kurti · Verified Boutique Patron</p>
             </div>
           </article>
@@ -751,9 +801,9 @@
         </div>
 
         <div class="boutique-invite-box">
-          <p style="font-family: var(--font-display); font-size: 1.35rem; color: var(--gold-light); margin-block-end: 0.35rem;">Experience Private Styling at Our Kala Ghoda Salon</p>
+          <p style="font-family: var(--font-display); font-size: 1.35rem; color: var(--gold-light); margin-block-end: 0.35rem;">Experience Private Styling at Our Mayfair Salon</p>
           <!-- TODO: Update address and hours below for your physical boutique -->
-          <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.86);">Visit Zariya Heritage Boutique at 24 Rampart Row, Kala Ghoda, Fort, Mumbai — Tuesday to Sunday, 11:00 AM to 8:30 PM. <a href="contact.html" style="color: var(--gold-light); text-decoration: underline; text-underline-offset: 4px;">Plan your boutique visit</a>.</p>
+          <p style="font-size: 0.92rem; color: rgba(251, 245, 234, 0.86);">Visit Zariya Heritage Boutique at 18 South Audley Street, Mayfair, London W1K 2PB — Tuesday to Sunday, 10:30 AM to 7:30 PM GMT. <a href="contact.html" style="color: var(--gold-light); text-decoration: underline; text-underline-offset: 4px;">Plan your boutique visit</a>.</p>
         </div>
       </div>
     </section>
@@ -823,7 +873,7 @@
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </a>
-            <a href="https://wa.me/919820012345?text=Hello%20Zariya%20Boutique%2C%20I%20would%20love%20styling%20assistance." class="social-icon-btn social-icon-btn--wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with Zariya on WhatsApp" title="WhatsApp">
+            <a href="https://wa.me/447700900123?text=Hello%20Zariya%20Boutique%2C%20I%20would%20love%20styling%20assistance." class="social-icon-btn social-icon-btn--wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with Zariya on WhatsApp" title="WhatsApp">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.477-.15-.678.15-.2.301-.778.979-.954 1.18-.175.2-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.895-.799-1.5-1.786-1.675-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.1-.2.05-.376-.025-.526-.075-.15-.678-1.634-.929-2.238-.244-.588-.493-.508-.678-.518-.175-.01-.376-.01-.577-.01-.2 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.513s1.08 2.915 1.23 3.116c.15.2 2.126 3.246 5.15 4.554.72.311 1.282.497 1.72.637.724.23 1.382.197 1.902.12.58-.087 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351zM12.042 21.666a9.58 9.58 0 0 1-4.887-1.332l-.35-.208-3.633.953.97-3.542-.228-.363a9.602 9.602 0 0 1-1.472-5.132c0-5.304 4.316-9.62 9.62-9.62a9.577 9.577 0 0 1 6.8 2.82 9.585 9.585 0 0 1 2.818 6.802c0 5.306-4.316 9.622-9.638 9.622zm8.384-18.006A11.758 11.758 0 0 0 12.042 0C5.402 0 .009 5.393.009 12.033a11.97 11.97 0 0 0 1.624 6.012L0 24l6.136-1.61a11.98 11.98 0 0 0 5.906 1.543h.005c6.64 0 12.033-5.393 12.033-12.033 0-3.214-1.252-6.236-3.524-8.238z"/>
               </svg>
@@ -868,7 +918,7 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 Zariya Heritage Boutique. All rights reserved.</p>
-        <p>24 Rampart Row, Kala Ghoda, Mumbai · <span class="ltr-num">+91 22 2284 7190</span></p>
+        <p>18 South Audley Street, Mayfair, London W1K 2PB · <span class="ltr-num">+44 20 7946 0920</span></p>
       </div>
     </div>
   </footer>
@@ -881,8 +931,8 @@
   </button>
 
   <!-- WhatsApp Click-to-Chat Concierge -->
-  <!-- TODO: Replace 919820012345 with your boutique's official WhatsApp Business number -->
-  <a href="https://wa.me/919820012345?text=Hello%20Zariya%20Boutique%2C%20I%20would%20love%20styling%20assistance%20with%20your%20ethnic%20wear%20collection." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Zariya Boutique on WhatsApp">
+  <!-- TODO: Replace 447700900123 with your boutique's official WhatsApp Business number -->
+  <a href="https://wa.me/447700900123?text=Hello%20Zariya%20Boutique%2C%20I%20would%20love%20styling%20assistance%20with%20your%20ethnic%20wear%20collection." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Zariya Boutique on WhatsApp">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/>
     </svg>
