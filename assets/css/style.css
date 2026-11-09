@@ -993,7 +993,8 @@ h4 {
    -------------------------------------------------------------------------- */
 
 /* 9A. Full-Bleed Parallax Royal Hero (Home 1, Products, Festive, Contact) */
-.hero-fullbleed {
+.hero-fullbleed,
+.hero-fullbleed--subpage {
   position: relative;
   min-height: clamp(580px, 86vh, 880px);
   display: flex;
@@ -1001,10 +1002,6 @@ h4 {
   overflow: hidden;
   color: var(--ivory);
   background-color: #120d10;
-}
-
-.hero-fullbleed--subpage {
-  min-height: clamp(460px, 66vh, 680px);
 }
 
 .hero-media {
@@ -1059,10 +1056,17 @@ h4 {
 /* 9B. Home 2 Split-Screen Architectural Hero (100% Different from Home 1!) */
 .hero-split {
   position: relative;
+  min-height: clamp(580px, 86vh, 880px);
+  display: flex;
+  align-items: center;
   background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-blush) 100%);
   padding-block: var(--space-6) var(--space-10);
   border-block-end: 1px solid var(--border-gold);
   overflow: hidden;
+}
+
+.hero-split > .container {
+  width: 100%;
 }
 
 .hero-split__grid {

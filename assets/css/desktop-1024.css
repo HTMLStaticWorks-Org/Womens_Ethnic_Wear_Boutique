@@ -72,13 +72,13 @@
   }
 
   /* --------------------------------------------------------------------------
-     3. HEADER & NAVIGATION (Tab Pro 1024-1199px uses Hamburger Menu like Tab view; 1200+ Desktop)
+     3. HEADER & NAVIGATION (Tab Pro 1024-1199px same as Tab view; 1200+ Web view)
      -------------------------------------------------------------------------- */
   .site-header {
     height: var(--header-height);
   }
 
-  /* In Tab Pro (1024px - 1199px), navbar keeps hamburger menu same as tab view */
+  /* In Tab Pro (1024px - 1199px), navbar is identical to tab view */
   .primary-nav {
     display: none !important;
   }
@@ -87,6 +87,7 @@
     display: none !important;
   }
 
+  /* In Tab Pro, theme & RTL toggles are kept in drawer menu like tab view */
   .site-header .header-actions > .js-theme-toggle,
   .site-header .header-actions > .js-rtl-toggle {
     display: none !important;
@@ -168,7 +169,7 @@
     color: var(--text-accent);
   }
 
-  /* Full Desktop Navigation (1200px+) */
+  /* Full Desktop / Web View Navigation (1200px+) */
   @media (min-width: 1200px) {
     .primary-nav {
       display: flex !important;
@@ -176,7 +177,10 @@
       gap: 1.85rem;
     }
 
-    .menu-toggle {
+    /* Remove hamburger menu for web view */
+    .menu-toggle,
+    .site-header .header-actions .menu-toggle,
+    .site-header .menu-toggle {
       display: none !important;
     }
 
@@ -190,19 +194,20 @@
     .site-header .header-actions > .js-rtl-toggle {
       display: inline-flex !important;
     }
+
+    .mobile-drawer {
+      display: none !important;
+    }
   }
 
   /* --------------------------------------------------------------------------
      4. HERO LAYOUTS (1024+)
      -------------------------------------------------------------------------- */
-  .hero-fullbleed {
+  .hero-fullbleed,
+  .hero-fullbleed--subpage {
     min-height: clamp(580px, 86vh, 880px);
     display: flex;
     align-items: center;
-  }
-
-  .hero-fullbleed--subpage {
-    min-height: clamp(460px, 66vh, 680px);
   }
 
   .hero-content {
@@ -211,7 +216,14 @@
   }
 
   .hero-split {
+    min-height: clamp(580px, 86vh, 880px);
+    display: flex;
+    align-items: center;
     padding-block: var(--space-6) var(--space-10);
+  }
+
+  .hero-split > .container {
+    width: 100%;
   }
 
   .hero-split__grid {

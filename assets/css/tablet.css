@@ -244,16 +244,10 @@
   /* --------------------------------------------------------------------------
      5. HERO LAYOUTS (CENTER-ALIGNED)
      -------------------------------------------------------------------------- */
-  .hero-fullbleed {
+  .hero-fullbleed,
+  .hero-fullbleed--subpage {
     min-height: 640px;
     padding-block: var(--space-8);
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero-fullbleed--subpage {
-    min-height: 480px;
-    padding-block: var(--space-6);
     justify-content: center;
     text-align: center;
   }
@@ -298,7 +292,14 @@
 
   /* Hero Split (Home 2 Tab) */
   .hero-split {
+    min-height: 640px;
+    display: flex;
+    align-items: center;
     padding-block: var(--space-6) var(--space-8);
+  }
+
+  .hero-split > .container {
+    width: 100%;
   }
 
   .hero-split__grid {

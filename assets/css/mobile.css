@@ -274,16 +274,10 @@
   /* --------------------------------------------------------------------------
      5. HERO LAYOUTS (CENTER-ALIGNED)
      -------------------------------------------------------------------------- */
-  .hero-fullbleed {
+  .hero-fullbleed,
+  .hero-fullbleed--subpage {
     min-height: 520px;
     padding-block: var(--space-6);
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero-fullbleed--subpage {
-    min-height: 400px;
-    padding-block: var(--space-4);
     justify-content: center;
     text-align: center;
   }
@@ -336,7 +330,14 @@
 
   /* Hero Split (Home 2) */
   .hero-split {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
     padding-block: var(--space-4) var(--space-6);
+  }
+
+  .hero-split > .container {
+    width: 100%;
   }
 
   .hero-split__grid {
@@ -1102,22 +1103,67 @@
      10. FESTIVE EDIT PAGE (CENTER-ALIGNED)
      -------------------------------------------------------------------------- */
   .color-story-shell {
-    padding: var(--space-3);
+    padding: var(--space-3) var(--space-2);
     text-align: center !important;
   }
 
+  /* Orderly 2-Column Palette Card Grid for Mobile (360px+) */
   .swatch-selector {
-    gap: var(--space-1);
-    margin-block-end: var(--space-3);
-    justify-content: center !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+    margin-block-end: var(--space-4) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .swatch-btn {
-    min-height: 42px;
-    padding: 0.4rem 0.75rem;
-    font-size: 0.75rem;
-    text-align: center;
-    justify-content: center;
+    width: 100% !important;
+    min-height: 44px !important;
+    padding: 0.45rem 0.5rem !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.04em !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.45rem !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+    border-radius: var(--radius-sm);
+  }
+
+  .swatch-btn:last-child {
+    grid-column: 1 / -1 !important;
+  }
+
+  .swatch-dot {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Specific micro-tuning for narrow mobile (<= 360px) */
+  @media (max-width: 360px) {
+    .color-story-shell {
+      padding: var(--space-2) var(--space-1);
+    }
+
+    .swatch-selector {
+      gap: 0.4rem !important;
+    }
+
+    .swatch-btn {
+      padding: 0.4rem 0.35rem !important;
+      font-size: 0.68rem !important;
+      letter-spacing: 0.03em !important;
+      gap: 0.35rem !important;
+    }
+
+    .swatch-dot {
+      width: 14px !important;
+      height: 14px !important;
+    }
   }
 
   .color-story-panel {
@@ -1126,10 +1172,12 @@
     text-align: center !important;
   }
 
+  .color-story-panel .eyebrow,
   .color-story-panel h2,
   .color-story-panel h3,
   .color-story-panel p {
     text-align: center !important;
+    justify-content: center !important;
     margin-inline: auto !important;
   }
 
